@@ -1,0 +1,35 @@
+<!--
+
+    {{}}-> data interpolation(one way data binding)
+    []->property binding
+    ()->event binding
+    [(ngModel)]->2 way data binding
+    <div class="jumbotron">
+    <h1 class="display-3">Home heading</h1>
+    <h2>hello : {{userName}}</h2>
+    <h3>your age is :{{userAge}}</h3>
+    <img [src]="userImg">
+    <p class="lead">home helper text</p>
+    <hr class="my-2">
+    <p>More info</p>
+    <p class="lead">
+        <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
+    </p>
+</div>
+structural directives (ngFor,ngIf)
+-->
+
+
+
+<div class="container">
+    <div  class="row">
+        <div *ngFor="let user of users" class="col-md-3">
+          <div class="user">
+              <h2>{{user.name}}</h2>
+              <h4>{{user.age}}</h4>
+              <img class="img-fluid" [src]="user.img">
+              <span class="badge badge-primary">{{user.salary}}</span>
+          </div>
+        </div>
+    </div>
+</div>
